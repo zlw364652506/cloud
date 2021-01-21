@@ -1,0 +1,26 @@
+所属模块或功能：警务通平台
+性质：[开发]
+状态：[开发中]
+更新说明：
+1.
+
+附件保存：AttachmentUtil.saveAttachmentList(jsql, in.getObjId(), in.getAtts(), getSystemConfig(), now)
+返回错误信息：indata.createAJOutData(IdStringToken.EntertainmentService.Errors.用户未登录);
+workDate = DateUtil.format(worklog.getOndutyTime(), "yyyy-MM-dd");
+Date workDateStart = DateUtil.parse(workDate + " 00:00:00");
+	List<Attachment> attachments = AttachmentUtil.getAttachmentList(jsql, employeeHealthCheck.getObjId(),
+									AttachmentBusType.EmployeeMedical, getSystemConfig(), true/false)
+
+AttachmentUtil.saveAttachmentNoAjFiles( jsql,  lte.getObjId(),  jsAtts,
+					getSystemConfig(), F.getSystemTimeFactory().now());
+
+
+所属模块或功能：公安检查站信息系统
+性质：[开发]
+状态：[开发中]
+更新说明：查询过车记录信息
+
+	Jsql.Logic<VerifyCarInfo, VerifyCarInfo> logic = null;F.log().d(logic.toSql());
+
+Date createTime = F.getSystemTimeFactory().now();
+FjdcWfjl uFjdcWfjl =  BeanUtil.clone(fjdcWfjl);
