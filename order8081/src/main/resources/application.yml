@@ -1,0 +1,14 @@
+server:
+  port: 8090
+
+
+spring:
+  application:
+    name: order80
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181
+
+
+
+

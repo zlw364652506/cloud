@@ -1,0 +1,15 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848  #服务注册中心地址
+      config:
+        server-addr: localhost:8848 #服务配置中心地址
+        file-extension: yaml
+  profiles:
+    active: dev

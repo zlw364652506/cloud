@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zlw.springcloud.dao.ParmentDao">
+    <insert id="Creat" parameterType="Parment" useGeneratedKeys="true" keyProperty="tid">
+        insert into parment(tid,tname) values (#{tid},#{tname});
+    </insert>
+
+    <resultMap id="ParmentMap" type="com.zlw.springcloud.entities.Parment">
+        <id column="tid" property="tid" ></id>
+        <id column="tname" property="tname" ></id>
+    </resultMap>
+    <select id="GetParmentByid" parameterType="String" resultMap="ParmentMap">
+        select tid,tname from parment where tid= #{tid}
+    </select>
+</mapper>
